@@ -1,85 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manager Login</title>
-  <style>
-    body {
-      font-family: "Roboto", Arial, sans-serif;
-      background: #f4f7fa;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .login-container {
-      width: 350px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .login-container h1 {
-      font-size: 24px;
-      color: #333333;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: bold;
-      color: #555555;
-    }
-
-    .form-group select,
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background: #f9f9f9;
-      box-sizing: border-box;
-    }
-
-    .form-group button {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #ffffff;
-      background: #007bff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .form-group button:hover {
-      background: #0056b3;
-    }
-
-    .error-message {
-      display: none;
-      margin-top: 10px;
-      color: red;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="login-body">
   <div class="login-container">
     <h1>Manager Login</h1>
     <div class="form-group">
@@ -96,31 +23,14 @@
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password">
+      <input type="password" id="password" placeholder="Enter your password"/>
     </div>
     <div class="form-group">
-      <button onclick="handleLogin()">Log In</button>
+      <button id="login-button">Log In</button>
     </div>
     <div id="error-message" class="error-message">Invalid login. Please try again.</div>
   </div>
 
-  <script>
-    function handleLogin() {
-      const manager = document.getElementById("manager-select").value;
-      const password = document.getElementById("password").value;
-
-      if (!manager || password !== "1234") {
-        const errorMessage = document.getElementById("error-message");
-        errorMessage.style.display = "block";
-        return;
-      }
-
-      // Save manager's name to sessionStorage
-      sessionStorage.setItem("manager", manager);
-
-      // Redirect to the violation form
-      window.location.href = "form.html";
-    }
-  </script>
+  <script src="js/login.js"></script>
 </body>
 </html>

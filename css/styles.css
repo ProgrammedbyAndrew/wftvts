@@ -1,0 +1,233 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #f4f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* LOGIN PAGE STYLES */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 350px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.login-container h1 {
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORM PAGE STYLES */
+.form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.form-container {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.form-container h1 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form-group input[readonly] {
+  background: #e9ecef;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-group button:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  display: none;
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+}
+
+/* PHOTOS PREVIEW */
+.photos-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.photos-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* PREVIEW (TICKET) PAGE STYLES */
+.preview-body {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.ticket-container {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.ticket-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ticket-header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.ticket-header p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ticket-details p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #333333;
+}
+
+.ticket-details p strong {
+  color: #555;
+}
+
+.ticket-photos {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ticket-photos img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.auto-draft {
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: center;
+  color: #777;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.action-buttons .print {
+  background: #28a745;
+}
+
+.action-buttons .email {
+  background: #007bff;
+}
+
+.action-buttons .text {
+  background: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container,
+  .form-container,
+  .ticket-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .photos-preview img,
+  .ticket-photos img {
+    width: 70px;
+    height: 70px;
+  }
+}
