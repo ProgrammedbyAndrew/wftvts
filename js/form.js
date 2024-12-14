@@ -29,7 +29,6 @@ function setCurrentDateTime() {
 document.getElementById("ticket-id").value = generateTicketID();
 setCurrentDateTime();
 
-// Violation dropdown logic
 const violationCodeSelect = document.getElementById("violation-code");
 const violationAmountInput = document.getElementById("violation-amount");
 
@@ -59,8 +58,12 @@ document.getElementById("submit-ticket").addEventListener("click", () => {
   const date = document.getElementById("violation-date").value.trim();
   const businessName = document.getElementById("business-name").value.trim();
   const truck = document.getElementById("truck-number").value.trim();
+
+  const selectedOption = violationCodeSelect.options[violationCodeSelect.selectedIndex];
   const violationCode = violationCodeSelect.value.trim();
+  const violationName = selectedOption.textContent;
   const violationAmount = parseFloat(violationAmountInput.value.trim());
+
   const description = document.getElementById("description").value.trim();
 
   if (!id || !date || !businessName || !truck || !violationCode || isNaN(violationAmount) || violationAmount <= 0 || !description) {
@@ -75,12 +78,12 @@ document.getElementById("submit-ticket").addEventListener("click", () => {
     truck,
     manager,
     violationCode,
+    violationName,
     violationAmount,
     description,
     photos: []
   };
 
-  // Handle Photos
   const files = photosInput.files;
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
@@ -88,9 +91,6 @@ document.getElementById("submit-ticket").addEventListener("click", () => {
     ticketDetails.photos.push(url);
   }
 
-  // Save ticket details to sessionStorage
   sessionStorage.setItem("ticketDetails", JSON.stringify(ticketDetails));
-
-  // Redirect to preview page
   window.location.href = "preview.html";
 });

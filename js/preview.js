@@ -13,16 +13,16 @@ function loadDetails() {
 
   // Populate violation details
   detailsDiv.innerHTML = `
-    <p><strong>Ticket ID:</strong> ${ticketDetails.id}</p>
-    <p><strong>Date/Time:</strong> ${ticketDetails.date}</p>
-    <p><strong>Business Name:</strong> ${ticketDetails.businessName}</p>
-    <p><strong>Truck:</strong> ${ticketDetails.truck}</p>
-    <p><strong>Issued By:</strong> ${ticketDetails.manager}</p>
-    <p><strong>Violation Code:</strong> ${ticketDetails.violationCode}</p>
-    <p><strong>Amount Due:</strong> $${ticketDetails.violationAmount.toFixed(2)}</p>
-    <p><strong>Description:</strong> ${ticketDetails.description}</p>
-  `;
-
+  <p><strong>Ticket ID:</strong> ${ticketDetails.id}</p>
+  <p><strong>Date/Time:</strong> ${ticketDetails.date}</p>
+  <p><strong>Business Name:</strong> ${ticketDetails.businessName}</p>
+  <p><strong>Truck:</strong> ${ticketDetails.truck}</p>
+  <p><strong>Issued By:</strong> ${ticketDetails.manager}</p>
+  <p><strong>Violation Code:</strong> ${ticketDetails.violationCode}</p>
+  <p><strong>Violation:</strong> ${ticketDetails.violationName}</p>
+  <p><strong>Amount Due:</strong> $${ticketDetails.violationAmount.toFixed(2)}</p>
+  <p><strong>Description:</strong> ${ticketDetails.description}</p>
+`;
   // Display photos
   ticketDetails.photos.forEach(photo => {
     const img = document.createElement("img");

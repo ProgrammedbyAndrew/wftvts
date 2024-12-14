@@ -22,23 +22,22 @@
 
     <div class="form-group">
       <label for="business-name">Business Name</label>
-      <input type="text" id="business-name" placeholder="e.g. Taco Truck " required/>
+      <input type="text" id="business-name" placeholder="e.g. Acme Corp" required/>
     </div>
 
     <div class="form-group">
-      <label for="truck-number">Truck/ Booth Number</label>
-      <input type="text" id="truck-number" placeholder="e.g. Spot 32" required/>
+      <label for="truck-number">Truck Number</label>
+      <input type="text" id="truck-number" placeholder="e.g. TRK-123" required/>
     </div>
 
     <div class="form-group">
       <label for="violation-code">Violation</label>
-      <!-- Dropdown of predefined violations -->
       <select id="violation-code" required>
         <option value="">Select a violation...</option>
-        <option data-amount="200" value="V-001">Incorrect hose 1 - $200</option>
-        <option data-amount="150" value="V-002">Missing permit - $150</option>
-        <option data-amount="300" value="V-003">Dirty work area - $300</option>
-        <option data-amount="100" value="V-004">Incorrect disposal - $100</option>
+        <option data-amount="200" value="V-001">Wrong Hose- $200</option>
+        <option data-amount="150" value="V-002">Dirty Work Area - $150</option>
+        <option data-amount="300" value="V-003">Missing Permit - $300</option>
+        <option data-amount="100" value="V-004">Over filled trash - $100</option>
       </select>
     </div>
 
@@ -53,7 +52,7 @@
     </div>
 
     <div class="form-group">
-      <label for="photos">Upload Photos (optional)</label>
+      <label for="photos">Upload Photos</label>
       <input type="file" id="photos" multiple accept="image/*"/>
       <div class="photos-preview" id="form-photos-preview"></div>
     </div>
